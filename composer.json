@@ -1,0 +1,24 @@
+{
+  "name": "fabio.hiroki/php-reflection-test",
+  "description": "Sample application to demonstrate how to use reflection to improve testability",
+  "authors": [
+    {
+      "name": "Fabio Hiroki",
+      "email": "fabiothiroki@gmail.com"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.0.10"
+    }
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.98",
+    "friendsofphp/php-cs-fixer": "^3.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "vendor/bin/phpstan analyse -c phpstan.neon",
+    "sniff": "./vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php"
+  }
+}
