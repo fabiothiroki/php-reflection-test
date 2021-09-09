@@ -1,5 +1,7 @@
 <?php
 
+namespace Foo\Bar;
+
 declare(strict_types=1);
 
 abstract class AbstractClass
@@ -10,4 +12,6 @@ abstract class AbstractClass
     {
         $this->unacessibleDependency = new UnacessibleDependency();
     }
+
+    abstract function doSomething(): void;
 }
