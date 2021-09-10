@@ -14,11 +14,18 @@
   },
   "require-dev": {
     "phpstan/phpstan": "^0.12.98",
-    "friendsofphp/php-cs-fixer": "^3.1"
+    "friendsofphp/php-cs-fixer": "^3.1",
+    "phpunit/phpunit": "^9.5"
   },
   "license": "MIT",
   "scripts": {
-    "lint": "vendor/bin/phpstan analyse -c phpstan.neon",
-    "sniff": "./vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php"
+    "lint": "./vendor/bin/phpstan analyse -c phpstan.neon",
+    "sniff": "./vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php",
+    "test": "./vendor/bin/phpunit tests"
+  },
+  "autoload": {
+    "classmap": [
+      "app/"
+    ]
   }
 }
