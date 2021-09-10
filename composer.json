@@ -19,8 +19,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "tests/vendor/bin/phpstan analyse -c phpstan.neon",
-    "sniff": "tests/vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php"
+    "lint": "./vendor/bin/phpstan analyse -c phpstan.neon",
+    "sniff": "./vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php",
+    "test": "./vendor/bin/phpunit tests"
   },
   "autoload": {
     "classmap": [
