@@ -1,13 +1,13 @@
 <?php
 
-namespace Foo\Bar;
-
 declare(strict_types=1);
+
+namespace Foo\Bar;
 
 class UnacessibleDependency
 {
-    public void doSomethingElse(): void
+    public function doSomethingElse(string $argument): void
     {
-
+        echo 'Doing something important with ' . $argument;
     }
 }

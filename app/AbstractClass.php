@@ -1,17 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Foo\Bar;
 
-declare(strict_types=1);
 
 abstract class AbstractClass
 {
-    private $unacessibleDependency;
+    protected $unacessibleDependency;
 
     public function __construct()
     {
         $this->unacessibleDependency = new UnacessibleDependency();
     }
 
-    abstract function doSomething(): void;
+    abstract function doSomething(string $argument): void;
 }
