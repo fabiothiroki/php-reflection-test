@@ -21,7 +21,8 @@
   "scripts": {
     "lint": "./vendor/bin/phpstan analyse -c phpstan.neon",
     "sniff": "./vendor/bin/php-cs-fixer fix -vvv --dry-run --show-progress=dots index.php",
-    "test": "XDEBUG_MODE=coverage ./vendor/bin/phpunit tests --coverage-clover coverage.xml"
+    "test": "./vendor/bin/phpunit tests tests",
+    "test-coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit tests --coverage-clover coverage.xml"
   },
   "autoload": {
     "classmap": [
