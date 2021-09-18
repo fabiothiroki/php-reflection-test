@@ -6,8 +6,7 @@ namespace Foo\Bar;
 
 class ImplementationClass extends AbstractClass
 {
-
-    function doSomething(string $argument): void
+    public function doSomething(string $argument): void
     {
         $this->unacessibleDependency->doSomethingElse($argument);
     }
