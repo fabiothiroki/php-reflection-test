@@ -23,12 +23,12 @@ class ImplementationClassTest extends TestCase
     {
         parent::setUp();
 
-        $this->mockUnacessible = $this->createMock(UnacessibleDependency::class);
-
         $this->implementation = new ImplementationClass();
         $reflectionClass = new ReflectionClass($this->implementation);
         $property = $reflectionClass->getProperty('unacessibleDependency');
         $property->setAccessible(true);
+
+        $this->mockUnacessible = $this->createMock(UnacessibleDependency::class);
         $property->setValue($this->implementation, $this->mockUnacessible);
     }
 
